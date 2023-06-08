@@ -1,0 +1,30 @@
+//this is a patial for headers
+$deep-red: rgba(139, 10, 10, 0.835);
+$deep-green: rgb(34, 91, 34);
+
+////////////////////////////////
+ // mixins are like function 
+//////////////////////////////// 
+@mixin square($color,$side) {
+    background-color: $color;
+    height: $side;
+    width: $side;
+    margin: 1rem;
+}
+
+.square-section {
+    .square {
+       @include square(teal,15rem);
+
+        // sudo class
+        &:active {
+            background-color: green;
+        }
+
+        &:hover {
+            background-color: $deep-red;
+        }
+    }
+
+}
+

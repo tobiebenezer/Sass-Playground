@@ -1,0 +1,27 @@
+@use "header"; // importing the header patial
+
+$deep-red: rgba(139, 10, 10, 0.835);
+$deep-green: rgb(34, 91, 34);
+
+body {
+    background-color: $deep-green;
+}
+
+
+/////////////////////////////////////////////////////
+/// @extend is used to inherit from other styles ///
+////////////////////////////////////////////////////
+
+.paragraph {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+section {
+    p {
+        @extend .paragraph;
+    }
+}
